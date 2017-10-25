@@ -1,0 +1,26 @@
+{
+  "name": "hangman-cli",
+  "version": "1.0.0",
+  "description": "command line hangman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wehbs/Hangman-Cli.git"
+  },
+  "keywords": [
+    "hangman"
+  ],
+  "author": "shamir wehbe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wehbs/Hangman-Cli/issues"
+  },
+  "homepage": "https://github.com/wehbs/Hangman-Cli#readme",
+  "dependencies": {
+    "figlet": "^1.2.0",
+    "inquirer": "^3.3.0"
+  }
+}
