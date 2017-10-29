@@ -39,7 +39,6 @@ function Word(word) {
                 console.log(data)
             });
             // Update the win counter in the console to match the winCount variable.
-            console.log("wins  " + winCount);
             // Run the startGame function.
             // startGame();
             setTimeout(startGame, 200);
@@ -116,7 +115,7 @@ function startGame() {
 
 
     console.log('\n');
-    console.log(selectedWord);
+    // console.log(selectedWord);
     // console.log("Remaining Guesses  " + guessesLeft);    
     console.log("Animal To Guess  " + blanksAndSuccesses.join(" "));
     // console.log("Guessed Wrong:  " + wrongLetters.join(" "));    
