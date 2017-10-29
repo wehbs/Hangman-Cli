@@ -1,5 +1,8 @@
 var figlet = require("figlet");
 var inquirer = require("inquirer");
+var Letter = require("./Letter");
+var Word = require("./Word");
+
 
 
 // GLOBAL VARIABLES
@@ -16,15 +19,9 @@ var winCount = 0;
 var guessesLeft;
 
 
-// WORD CONSTRUCTOR
-function Word(word) {
-    this.word = word;
-};
 
 Word.prototype.roundComplete = function () {
 
-    // console.log('\n');
-    // console.log("Remaining Guesses  " + guessesLeft);
     // FIGLET FUNCTION
     figlet(blanksAndSuccesses.join(" "), function (err, data) {
         console.log('\n');
@@ -63,11 +60,6 @@ Word.prototype.roundComplete = function () {
 };
 
 
-// LETTER CONSTRUCTOR
-function Letter(letter) {
-    this.letter = letter;
-};
-
 // Checks whether the letter selected macthes any letters of the chosen word.
 Letter.prototype.checkLetters = function (letter) {
     var isLetterInWord = false;
@@ -95,7 +87,7 @@ Letter.prototype.checkLetters = function (letter) {
     setTimeout(startInquirer, 250);
 };
 
-
+// Starts the game and resets values.
 function startGame() {
     randomWord = new Word(wordOptions[Math.floor(Math.random() * wordOptions.length)]);
 
