@@ -25,10 +25,13 @@ function Word(word) {
         console.log("Remaining Guesses  " + guessesLeft);
         console.log("Animal To Guess  " + blanksAndSuccesses.join(" "));
         console.log("Guessed Wrong:  " + wrongLetters.join(" "));
+        console.log('\n');
+        
 
         // Check if user won then add 1 to win count and show an alert saying you won.
         if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
             winCount++;
+            console.log('\n');        
             console.log("You Won!");
 
             // Update the win counter in the console to match the winCount variable.
@@ -109,10 +112,10 @@ function startGame() {
     console.log("Wins  " + winCount);
 
     // FIGLET FUNCTION
-    figlet("Welcome  to  animal  hangman", function (err, data) {
+    figlet("Animal  Hangman", function (err, data) {
         console.log('\n');
         console.log(data)
-        startInquirer();
+        // startInquirer();
 
     });
 
@@ -132,14 +135,14 @@ function startInquirer() {
         var letterGuessed = new Letter(answers.letter);
 
         // Run the picked letter through the check letter function
-        letterGuessed.checkLetters(answers.letter);
+        letterGuessed.checkLetters(letterGuessed.letter);
         randomWord.roundComplete();
+        // console.log(letterGuessed.letter);        
         //startInquirer();
     });
 };
 
 
 
-
-
 startGame();
+startInquirer();
